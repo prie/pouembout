@@ -1,0 +1,5 @@
+# Schema for the theme setting configuration file of the THEMETITLE theme.
+
+pouembout.settings:
+  type: theme_settings
+  label: 'Pouembout settings'

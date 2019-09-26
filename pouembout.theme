@@ -1,0 +1,31 @@
+<?php
+use Drupal\Component\Utility\Html;
+/**
+ * @file
+ * Bootstrap sub-theme.
+ *
+ * Place your custom PHP code in this file.
+ */
+
+ /**
+  * Get node id for html.html.twig
+  */
+function pouembout_preprocess_html(&$variables) {
+  $variables['path_info']['args'] = FALSE;
+  $path = \Drupal::service('path.current')->getPath();
+  $path_args = explode('/', $path);
+  if (count($path_args) >= 3) {
+    $variables['path_info']['args'] = Html::cleanCssIdentifier(ltrim($path, '/'));
+  }
+}
+
+function pouembout_form_alter(&$form, $form_state, $form_id) {
+  if (strpos($form_id, 'contact_message_') !== FALSE) {
+    /*
+     * echo '<pre>';
+     * print_r($form);
+     * echo '</pre>';
+     */
+    $form['actions']['preview']['#access'] = FALSE;
+  }
+}

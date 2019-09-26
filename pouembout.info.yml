@@ -1,0 +1,33 @@
+core: 8.x
+type: theme
+base theme: bootstrap
+
+name: 'Pouembout'
+description: 'Custom responsive theme base on Bootsrap 3 LESS source files (must be compiled).'
+package: 'Bootstrap'
+
+regions:
+  navigation: 'Navigation'
+  navigation_collapsible: 'Navigation (Collapsible)'
+  site_title: 'Site title'
+  main_bg: 'Main top'
+  header: 'Top Bar'
+  highlighted: 'Highlighted'
+  help: 'Help'
+  content: 'Content'
+  content_btm: 'Content bottom'
+  sidebar_first: 'Primary'
+  sidebar_second: 'Secondary'
+  bottom_one: 'Bottom one'
+  bottom_inter: 'Bottom inter'
+  bottom_two: 'Bottom two'
+  footer: 'Footer 1'
+  footer_nd: 'Footer 2'
+  footer_th: 'Footer 3'
+  footer_rt: 'Footer 4'
+  page_top: 'Page top'
+  page_bottom: 'Page bottom'
+
+libraries:
+  - 'pouembout/global-styling'
+  - 'pouembout/bootstrap-scripts'
